@@ -1,23 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-    <link rel="stylesheet" href="../styles.css">
-</head>
-<body>
-    <div class="aboutus-container">
-        <nav class="nav-fixed">
-            <img src="../../images/logo.png" alt="" id="logo-small">
-             <ul class="secondary-nav-list">
-                 <li>Home</li>
-                 <li>Menu</li>
-                 <li>Contact</li>
-                 <li>About Us</li>
-             </ul>
-        </nav>
+function createAbout() {
+    let container = document.createElement("div");
+    container.classList.add("aboutus-container");
+
+    container.innerHTML = `
         <div class="title-section">
             About Us
         </div>
@@ -38,23 +23,6 @@
             <p>Friends and co-owners Steve Chabot and Blake Stoneburgh first opened the doors to Stoney’s Bread Company in 2004. The name of the restaurant was inspired by the football career of Blake’s Dad, Norm Stoneburgh. During his 13 seasons with the Toronto Argonauts he was famously known as ‘Stoney’.</p>
             <p>A football legend and seasoned philanthropist, Stoney has always been passionate about giving back to the community and was happy to lend his name to the restaurant. In return, we wanted to make sure that his namesake embodied every positive quality that he represented – something we are continually working toward.</p>
         </div>
-    </div>
-    <footer>
-        <div class="footer-info">
-            <ul class="footer-left">
-                <li>Stoney's Bread Company Oakville</li>
-                <li>325 Kerr St.</li>
-                <li>Oakville, ON</li>
-                <li>L6K 3B6</li>
-                <li>905-849-3627</li>
-            </ul>
-            <ul class="footer-right">
-                <li>Monday - Saturday: 11:00 am - 8:00pm</li>
-                <li>Sunday: 9:00 am - 3:00 pm</li>
-                <li>We Do Not Accept Online Orders</li>
-            </ul>
-        </div>
-        <div class="footer-copyright">Copyright © 2022 Stoney's Bread Company  •  All rights reserved</div>
-    </footer>
-</body>
-</html>
+    `
+    return container;
+}
