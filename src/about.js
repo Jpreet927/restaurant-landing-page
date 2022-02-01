@@ -26,3 +26,5 @@ function createAbout() {
     `
     return container;
 }
+
+export { createAbout };

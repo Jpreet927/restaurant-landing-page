@@ -35,3 +35,5 @@ function createFooter() {
 
     return footer;
 }
+
+export { createFooter };

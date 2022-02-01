@@ -95,3 +95,5 @@ function createMenu() {
 
     return container;
 }
+
+export { createMenu };
