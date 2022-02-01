@@ -1,4 +1,5 @@
 # Restaurant Landing Page
+![preview](https://github.com/Jpreet927/restaurant-landing-page/blob/main/images/github-preview.png)
 
 ## Description
 This project encompasses a multiple page website created for a fictional restaurant. The DOM elements are generated entirely with JavaScript, using webpack to bundle each JavaScript source file into a target file. 
