@@ -1,48 +1,31 @@
 function createMain() {
+    // main section
     let container = document.createElement("div");
     let main = document.createElement("div");
-    main.classList.add("main-section");
-    // let header = document.createElement("header");
-    // let smallLogo = document.createElement("img");
-    // smallLogo.src = "./images/logo.png";
-    // smallLogo.id = "logo-small";
-    // let navList = document.createElement("ul");
-
-    // let navItems = ["Home", "Menu", "About Us", "Contact"];
-    // for (var i = 0; i < navItems.length; i++) {
-    //     let li = document.createElement("li");
-    //     li.innerText = navItems[i];
-    //     li.classList.add("nav-item");
-    //     navList.appendChild(li);
-    // }
-
-    // let reserveBtn = document.createElement("button");
-    // reserveBtn.classList.add("reservation-btn")
-    // reserveBtn.innerText = "Book a Reservation!";
-
-    // header.append(smallLogo, navList, reserveBtn);
-
     let mainLogoContainer = document.createElement("div");
     let mainLogo = document.createElement("img");
+
+    main.classList.add("main-section");
     mainLogoContainer.classList.add("logo-container");
     mainLogo.src = "./images/logo.png";
-    mainLogo.id = "logo-main"
-    mainLogoContainer.appendChild(mainLogo);
+    mainLogo.id = "logo-main";
 
+    mainLogoContainer.appendChild(mainLogo);
     main.append(mainLogoContainer);
 
-
+    // info section
     let infoSection = document.createElement("div");
-    infoSection.classList.add("section-title", "info-section");
     let textContainer = document.createElement("div");
-    textContainer.classList.add("text-container");
     let infoHeaderContainer = document.createElement("div");
-    infoHeaderContainer.classList.add("info-header-container");
     let heading = document.createElement("h1");
+    let horizontalLine = document.createElement("div");
+
+    infoSection.classList.add("section-title", "info-section");
+    textContainer.classList.add("text-container");
+    infoHeaderContainer.classList.add("info-header-container");
     heading.classList.add("heading");
-    heading.textContent = "COVID-19 Safety"
-    let horizontalLine = document.createElement("div"); // EXPORT
     horizontalLine.classList.add("horizontal-line");
+    heading.textContent = "COVID-19 Safety"
     infoHeaderContainer.append(heading, horizontalLine);
 
     let p1 = document.createElement("p");
@@ -66,30 +49,29 @@ function createMain() {
     li5.textContent = "We will continue to do everything we can to provide the best experience possible with our take-away and delivery.";
 
     infoList.append(li1, li2, li3, li4, li5);
-
     textContainer.append(infoHeaderContainer, p1, p2, p3, infoList);
     infoSection.appendChild(textContainer);
 
+    // testimonials section
     let testimonials = document.createElement("div");
-    testimonials.classList.add("testimonials");
     let testimonialHeader = document.createElement("div");
-    testimonialHeader.classList.add("testimonial-header");
     let testimonialTitle = document.createElement("h2");
-    testimonialTitle.classList.add("section-title");
-    testimonialHeader.appendChild(testimonialTitle);
-
     let testimonialContainer = document.createElement("div");
-    testimonialContainer.classList.add("testimonial-container");
-
     let testimonial1 = createTestimonial();
     let testimonial2 = createTestimonial();
     let testimonial3 = createTestimonial();
 
+    testimonials.classList.add("testimonials");
+    testimonialHeader.classList.add("testimonial-header");
+    testimonialTitle.classList.add("section-title");
+    testimonialContainer.classList.add("testimonial-container");
+    testimonialTitle.textContent = "Testimonials";
+
+    testimonialHeader.appendChild(testimonialTitle);
     testimonialContainer.append(testimonial1, testimonial2, testimonial3);
     testimonials.append(testimonialHeader, testimonialContainer);
 
     container.append(main, infoSection, testimonials);
-
     return container;
 }
 
@@ -100,12 +82,10 @@ function createTestimonial() {
     
     testimonialExample.classList.add("testimonial-example");
     h3.classList.add("testimonial-title");
-
     h3.textContent = "Jaipreet Singh - 10/10";
     p.textContent = "Voluptate deserunt est mollit nulla commodo sunt commodo ea fugiat consectetur incididunt velit enim. Nisi veniam et magna cupidatat id.";
 
     testimonialExample.append(h3, p);
-
     return testimonialExample;
 }
 
