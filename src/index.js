@@ -115,32 +115,70 @@ let content_div = document.getElementById("content");
 //     return testimonialExample;
 // }
 
+let header = createHeader();
+let footer = createFooter();
+let page = '';
+
 function createPage() {
-    let header = createHeader();
     let mainPage = createMain();
-    let footer = createFooter();
     content_div.append(header, mainPage, footer);
 }
 
 createPage()
 
-let navItems = document.querySelectorAll(".nav-item");
-navItems.forEach((item) => {
-    item.addEventListener('click', () => {
-        console.log("yo");
-        content_div.innerHTML = "";
-        let page = ''
-        if (item.innerText == "Home") {
-            page = createMain();
-        } else if (item.innerText == "Menu") {
-            page = createMenu();
-        } else if (item.innerText == "About Us") {
-            page = createAbout();
-        } else if (item.innerText == "Contact") {
-            page = createContact();
-        }
-        let header = createHeader();
-        let footer = createFooter();
-        content_div.append(header, page, footer);
-    })
+// let navItems = document.querySelectorAll(".nav-item");
+// navItems.forEach((item) => {
+//     item.addEventListener('click', () => {
+//         console.log(navItems);
+//         console.log("yo");
+//         let header = createHeader();
+//         let footer = createFooter();
+        
+//         let page = ''
+//         if (item.innerText == "Home") {
+//             content_div.innerHTML = "";
+//             page = createMain();
+//             content_div.append(header, page, footer);
+//         } else if (item.innerText == "Menu") {
+//             content_div.innerHTML = "";
+//             page = createMenu();
+//             content_div.append(header, page, footer);
+//         } else if (item.innerText == "About Us") {
+//             content_div.innerHTML = "";
+//             page = createAbout();
+//             content_div.append(header, page, footer);
+//         } else if (item.innerText == "Contact") {
+//             content_div.innerHTML = "";
+//             page = createContact();
+//             content_div.append(header, page, footer);
+//         }
+        
+        
+//     })
+// })
+
+let navHome = document.getElementById("nav-home");
+navHome.addEventListener('click', () => {
+    content_div.innerHTML = "";
+    page = createMain();
+    content_div.append(header, createMain(), footer);
+})
+
+let navMenu = document.getElementById("nav-menu");
+navMenu.addEventListener('click', () => {
+    content_div.innerHTML = "";
+    page = createMenu();
+    content_div.append(header, createMenu(), footer);
+})
+
+let navContact = document.getElementById("nav-contact");
+navContact.addEventListener('click', () => {
+    content_div.innerHTML = "";
+    content_div.append(header, createContact(), footer);
+})
+
+let navAbout = document.getElementById("nav-about");
+navAbout.addEventListener('click', () => {
+    content_div.innerHTML = "";
+    content_div.append(header, createAbout(), footer);
 })

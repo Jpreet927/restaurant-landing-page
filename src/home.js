@@ -40,6 +40,7 @@ function createMain() {
     infoHeaderContainer.classList.add("info-header-container");
     let heading = document.createElement("h1");
     heading.classList.add("heading");
+    heading.textContent = "COVID-19 Safety"
     let horizontalLine = document.createElement("div"); // EXPORT
     horizontalLine.classList.add("horizontal-line");
     infoHeaderContainer.append(heading, horizontalLine);
